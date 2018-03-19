@@ -13,7 +13,7 @@ body{
 	position: absolute;
 	top: 20%;
     left: 40%;
-    height: 200px;
+    height: 250px;
 	width:300px;
 	padding:8px;
 	box-shadow:5px 10px #888888;
@@ -38,16 +38,52 @@ body{
   }
   .btn{
   	margin-top : 10px;
-  	margin-left : 25%;
+  	margin-left : 15%;
   	width: 100px;
   	height: 30px;
   	font-family : sans-serif;
+	border : none;
+  }
+  .btn:hover{
+	opacity:0.7;
   }
   .element{
-  	padding: 10px 12px;
+	width: 148px;
+	cursor: pointer;
+  	height: 30px;
+	text-align:center;
+	padding-top : 10px;
+	top:10px;
+	float:left;
   	border: 1px solid black;
-  	background-color: #
   }
+  .element:hover{
+	opacity: 0.7;
+  }
+  .right{
+	float:right;
+  }
+  .link-btn{
+	text-decoration: none;
+	font-size: 13px;
+	color: black;
+  	font-family : sans-serif;
+	padding : 8px 30px;
+	background-color : #DDDDDD;
+  }
+  .link-btn:hover{
+	opacity:0.7;
+  }
+  #ngo-form{
+		display : none;
+	}
+	#user{
+		background-color : #AAAAAA;
+	}
+	
+	#ngo{
+		background-color : #CCCCCC;
+	}
 </style>
 </head>
 <body>
@@ -67,19 +103,64 @@ function change(n){
 	}
 	
 }
+function nchange(n){
+	if(n=='ngo-id'){
+		document.getElementById("password").style.visibility = 'hidden';
+		document.getElementById(n).style.visibility = 'visible';
+		document.getElementById('ngo-id1').placeholder='';
+		document.getElementById('password1').placeholder='Enter Password';
+	}
+	else{
+		document.getElementById("ngo-id").style.visibility = 'hidden';
+		document.getElementById(n).style.visibility = 'visible';
+		document.getElementById('ngo-id1').placeholder='Enter NGO ID';
+		document.getElementById('password1').placeholder='';
+	}
+	
+}
+
+function formchange(n){
+	if(n=='user'){
+		document.getElementById('ngo-form').style.display="none";
+		document.getElementById('user-form').style.display="block";
+		document.getElementById('ngo').style.backgroundColor='#CCCCCC';	
+		document.getElementById('user').style.backgroundColor='#AAAAAA';
+	}
+	else{
+		document.getElementById('user-form').style.display="none";
+		document.getElementById('ngo-form').style.display="block";
+		
+		document.getElementById('user').style.backgroundColor='#CCCCCC';	
+		document.getElementById('ngo').style.backgroundColor='#AAAAAA';
+	}
+	
+}
 </script>
 <div class="form1">
 	<div class="tab">
-		<span class="element">User</span>
-		<span class="element">NGOs</span>
+		<div id="user" class="element" onClick="formchange('user');">User</div>
+		<div id="ngo" class="element right" onClick="formchange('ngo');">NGOs</div>
 	</div>
-  <form method="post" action="AdminLoginCheck" >
+	<div id="user-form">
+  <form  method="post" action="UserLogin" >
       <br><label id="uname" class="label">UserName</label>
       <input id="uname1" class="text" type="text" name="userName" placeholder="Enter UserName" onclick="change('uname')" required><br>
       <label id="pass" class="label">Password</label><br>
       <input id="pass1" class="text" type="password" name="password" placeholder="Enter Password" onclick="change('pass')" required><br>
       <button class="btn" type="submit">Login</button>
+	  <a class="link-btn" href="">SignUp</a>
+	</form>
+   </div>
+   <div id="ngo-form">
+ <form  method="post" action="NGOLogin" >
+      <br><label id="ngo-id" class="label">NGO ID</label>
+      <input id="ngo-id1" class="text" type="text" name="ngo-id" placeholder="Enter NGO ID" onclick="nchange('ngo-id')" required><br>
+      <label id="password" class="label">Password</label><br>
+      <input id="password1" class="text" type="password" name="password" placeholder="Enter Password" onclick="nchange('password')" required><br>
+      <button class="btn" type="submit">Login</button>
+	  <a class="link-btn" href="">SignUp</a>
    </form>
+  </div>
    </div>
 </body>
 </html>
