@@ -4,8 +4,8 @@
 				margin-right: auto;
 			}
 			#nav{
-				height: 60px;
-				background-color: #33d150;
+				height: 50px;
+				background-color: #49ba5e;
 				overflow: hidden;
 			}
 			.nav-link1{
@@ -15,7 +15,7 @@
 				font-size: 20px;
 				color: yellow;
 				text-decoration: none;
-				transition: all 0.8s ease;
+				transition: all 0.2s ease;
 			}
 			.nav-link1:hover{
 				font-weight: bold;

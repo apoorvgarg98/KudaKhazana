@@ -1,12 +1,8 @@
 package ProductController;
 
-import java.io.File;
 import java.io.IOException;
 import java.sql.*;
-import java.util.Iterator;
-import java.util.List;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -14,17 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import org.apache.tomcat.util.http.fileupload.FileItem;
-import org.apache.tomcat.util.http.fileupload.FileUploadException;
-import org.apache.tomcat.util.http.fileupload.RequestContext;
-import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
-import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
-
-
-/**
- * Servlet implementation class ProductUpload
- */
 
 @MultipartConfig
 @WebServlet("/ProductUpload")
@@ -41,8 +26,7 @@ public class ProductUpload extends HttpServlet
 		String category = request.getParameter("category");
 		String price = request.getParameter("price");
 		String descp = request.getParameter("desc");
-		//String owner = session.getAttribute("userName").toString();
-		String owner = "Apoorv";
+		String owner = session.getAttribute("userName").toString();
 		
 		try 
 		{

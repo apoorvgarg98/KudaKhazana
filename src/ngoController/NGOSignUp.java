@@ -18,11 +18,11 @@ public class NGOSignUp extends HttpServlet {
 		 
         try
         {
-            Class.forName("oracle.jdbc.driver.OracleDriver");  
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE" , "system" , "connect");
-           
+        	Class.forName("com.mysql.jdbc.Driver");
+    		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Kuda","apoorv","june1998");
+    		
             String name = request.getParameter("name");
-            String id = request.getParameter("id");
+            String id = request.getParameter("ngoid");
             String required = request.getParameter("required");
             String password = request.getParameter("password");
             String website = request.getParameter("website");
@@ -48,7 +48,7 @@ public class NGOSignUp extends HttpServlet {
             {
             	request.getRequestDispatcher("index.jsp").include(request,response);
  			   response.setContentType("text/html");
- 			   response.getWriter().print("<script>window.alert('Invalid username or password');</script>");
+ 			   response.getWriter().print("<script>window.alert('Invalid id or password');</script>");
             }
         }
         catch(Exception e)
