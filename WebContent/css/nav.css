@@ -16,6 +16,7 @@
 				font-size: 20px;
 				color: yellow;
 				text-decoration: none;
+				transition: all 0.8s ease;
 			}
 			.nav-link1:hover{
 				font-weight: bold;

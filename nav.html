@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>KudaKhazaana</title>
+		<link rel="Shortcut Icon" href="WebContent/images/11111.png">
+		<link rel="stylesheet" href="WebContent/css/nav.css">
+		<style type="text/css">
+			.icon{
+				margin-top: auto;
+				margin-left: 1%;
+				width: 420px;
+				height: 130px;		
+			} 
+			#logo{
+				color: yellow;
+				font-style: italic;
+				font-family: yellowtail;
+				font-size: 40px;
+				position: relative;
+				top: -50px;
+				left: 5px;
+			}
+			.logo-link{
+				text-decoration: none;
+			}
+			.slideshow{
+				position: relative;
+				width: 1000px;
+				margin-right: auto;
+				margin-left: auto;
+				height : 500px;
+			}
+			.button{
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				height: 60px;
+				width: 35px;
+				background-color: transparent;
+				border: none;
+				z-index: 1;
+			}
+			
+			.right{
+				right: 0;
+			}
+			.slide-button{
+				margin-left: -10px;
+				height: 60px;
+				width: 35px;
+				opacity: 0.4;
+				transition: all 0.5s ease;
+			}
+			.button:hover .slide-button{
+				opacity: 1;
+			}
+			.group{
+				display: none;
+			}
+			.image{
+				max-height: 500px;
+				width:100%;
+			}
+			.caption{
+				position: absolute;
+				top:90%;
+				right: 50%;
+				color : grey;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id= "pagewrapper">
+			<div class="icon">
+			<a class="logo-link" href="nav.html">
+				<img class= "image1"src="WebContent/images/11111.png" height="130px" width="130px">
+				<span id="logo">Kuda Khazaana</span>
+			</a>
+			</div>
+
+			<div id="nav">
+				<a class="nav-link1" href="">Clothing</a>
+				<a class="nav-link1" href="">Food</a>
+				<a class="nav-link1" href="">Books</a>
+				<a class="nav-link1" href="">Electronics</a>
+				<a class="nav-link1" href="">Sports</a>
+				<a class="nav-link1" href="">Automobile</a>
+				<div id="dropdown">
+					<div><img id="acc-icon" src="WebContent/images/account.png"></div>
+					<div class="dropdown-content">
+						<a class="nav-link" href="">SignUp</a>
+						<a class="nav-link" href="">SignIn</a>
+						<a class="nav-link" href="">Settings And More</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="slideshow">	
+				<div class="group" id="g1">
+					<img class="image" src="WebContent/images/1.png" alt="image1"/>
+					<span class="caption" id="c1">1/4</span>
+				</div>
+				<div class="group" id="g2">
+					<img class="image" src="WebContent/images/2.png" alt="image2"/>
+					<span class="caption" id="c2">2/4</span>
+				</div>
+				<div class="group" id="g3">
+					<img class="image" src="WebContent/images/3.png" alt="image3"/>
+					<span class="caption" id="c3">3/4</span>
+				</div>
+				<div class="group" id="g4">
+					<img class="image" src="WebContent/images/5.png" alt="image3"/>
+					<span class="caption" id="c4">4/4</span>
+				</div>
+
+				<script type="text/javascript">
+					var slide=1;
+					show(1);
+
+					function change(n){
+						show(slide+=n);
+					}
+
+					function show(n){
+						var i;
+						var group = document.getElementsByClassName("group");
+						if(n>group.length)
+							n=1;
+						else if(n<1)
+							n=group.length;
+						slide=n;
+						for(i=0;i<group.length;i++){
+							group[i].style.display="none";
+						}
+
+						group[n-1].style.display="block";
+					}
+
+				</script>
+
+				<button class="button left" onclick="change(-1)"><img class="slide-button" src="WebContent/images/left.png"></button>
+
+				<button  class="button right" onclick="change(1)"><img class="slide-button" src="WebContent/images/right.png"></button>
+
+
+
+
+			</div>
+
+		</div>
+	</body>
+</html>
