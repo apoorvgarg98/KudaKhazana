@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Shortcut Icon" href="images/11111.png">
+<link rel="stylesheet" href="css/index.css">
+<meta charset="ISO-8859-1">
+<title>UserSignUp</title>
+<style>
+.header{
+	text-align: center;
+	color : #33d150;
+	margin-top:0;
+}
+.form2{
+	position: absolute;
+    top: 22%;
+    left: 40%;
+    height: 420px;
+    width:300px;
+    padding-left : 20px ;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow:5px 7px #11b030;
+    background-color:white;
+}
+.button{
+	position: relative;
+	padding : 12px 14px;
+	top: 6px;
+	left: 27%;
+	border : none;
+	background-color: #33d150;
+	color : white;
+}
+.button:hover{
+	opacity: 0.7;
+}
+</style>
+</head>
+<body>
+<div class="icon">
+			<a class="logo-link" href="index.jsp">
+				<img class= "image1"src="images/11111.png" height="130px" width="130px">
+				<span id="logo">Kuda Khazaana</span>
+			</a>
+</div>
+  
+  <div class="form2">
+	<h1 class="header">SignUp</h1>
+  <form method="post" action="UserSignUp">
+	<label><b>UserName</b></label><br>
+	<input required class="text" type="text" name="uname" placeholder="Enter UserName" /><br>
+	<label><b>Password</b></label><br>
+	<input required class="text" type="password" name="password" placeholder="Enter password"/><br>
+	<label><b>Name</b></label><br>
+	<input required type="text" class="text" name="name" placeholder="Enter Name"/><br>
+	<label><b>Email</b></label><br>
+	<input required type="email" name="email" class="text" placeholder="Enter Email"><br>
+	<label><b>Mobile</b></label><br>
+	<input required type="text" name="mobile" class="text" placeholder="Enter Mobile Number"><br>
+	<button class="button" type="submit">Create Account</button><br>
+	</form>
+ </div>
+  
+</body>
+</html>

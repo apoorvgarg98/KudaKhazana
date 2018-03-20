@@ -1,0 +1,98 @@
+@CHARSET "ISO-8859-1";
+body{
+    background-color:#33d150;
+}
+.form1{
+    position: absolute;
+    top: 28%;
+    left: 40%;
+    height: 250px;
+    width:300px;
+    padding:8px;
+    box-shadow:5px 7px #11b030;
+    background-color:white;
+  }
+  .text{
+    margin:6px;
+    padding:8px;   
+    border: 0;
+    border-bottom: 1px solid black;
+    width:80%;
+  }
+  .radio{
+     margin:none;
+     padding:none;
+  }
+  .label{
+    positon:relative;
+    margin-left : 10px;
+    color : #807aa3;  
+    visibility: hidden;
+  }
+  .btn{
+    margin-top : 10px;
+    margin-left : 15%;
+    width: 100px;
+    height: 30px;
+    font-family : sans-serif;
+    border : none;
+  }
+  .btn:hover{
+    opacity:0.7;
+  }
+  .element{
+    width: 148px;
+    cursor: pointer;
+    height: 30px;
+    text-align:center;
+    padding-top : 10px;
+    top:10px;
+    float:left;
+   
+  }
+  .element:hover{
+    opacity: 0.7;
+  }
+  .right{
+    float:right;
+  }
+  .link-btn{
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+    font-family : sans-serif;
+    padding : 8px 30px;
+    background-color : #DDDDDD;
+  }
+  .link-btn:hover{
+    opacity:0.7;
+  }
+  #ngo-form{
+        display : none;
+    }
+    #user{
+        background-color : #33d150;
+        color: white;
+    }
+    icon{
+				margin-top: auto;
+				margin-left: 1%;
+				width: 420px;
+				height: 130px;		
+			} 
+			#logo{
+				color: yellow;
+				font-style: italic;
+				font-family: yellowtail;
+				font-size: 40px;
+				position: relative;
+				top: -50px;
+				left: 5px;
+			}
+			.logo-link{
+				text-decoration: none;
+			}
+			.image{
+				max-height: 500px;
+				width:100%;
+			}

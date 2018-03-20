@@ -3,88 +3,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="Shortcut Icon" href="images/11111.png">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/index.css">
+<title>Kuda Khazana</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <style>
-body{
-    background-color:#33d150;
-}
-.form1{
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    height: 250px;
-    width:300px;
-    padding:8px;
-    box-shadow:5px 7px #11b030;
-    background-color:white;
-  }
-  .text{
-    margin:6px;
-    padding:8px;   
-    border: 0;
-    border-bottom: 1px solid black;
-    width:80%;
-  }
-  .radio{
-     margin:none;
-     padding:none;
-  }
-  .label{
-    positon:relative;
-    margin-left : 10px;
-    color : blue;  
-    visibility: hidden;
-  }
-  .btn{
-    margin-top : 10px;
-    margin-left : 15%;
-    width: 100px;
-    height: 30px;
-    font-family : sans-serif;
-    border : none;
-  }
-  .btn:hover{
-    opacity:0.7;
-  }
-  .element{
-    width: 148px;
-    cursor: pointer;
-    height: 30px;
-    text-align:center;
-    padding-top : 10px;
-    top:10px;
-    float:left;
-   
-  }
-  .element:hover{
-    opacity: 0.7;
-  }
-  .right{
-    float:right;
-  }
-  .link-btn{
-    text-decoration: none;
-    font-size: 13px;
-    color: black;
-    font-family : sans-serif;
-    padding : 8px 30px;
-    background-color : #DDDDDD;
-  }
-  .link-btn:hover{
-    opacity:0.7;
-  }
-  #ngo-form{
-        display : none;
-    }
-    #user{
-        background-color : #33d150;
-        color: white;
-    }
    
 </style>
 </head>
 <body>
+<div class="icon">
+			<a class="logo-link" href="index.jsp">
+				<img class= "image1"src="images/11111.png" height="130px" width="130px">
+				<span id="logo">Kuda Khazaana</span>
+			</a>
+</div>
 <script type="text/javascript">
 function change(n){
     if(n=='uname'){
@@ -143,7 +78,9 @@ function formchange(n){
     <div class="tab">
         <div id="user" class="element" onClick="formchange('user');">User</div>
         <div id="ngo" class="element right" onClick="formchange('ngo');">NGOs</div>
+        
     </div>
+  
     <div id="user-form">
   <form  method="post" action="UserLogin" >
       <br><label id="uname" class="label">UserName</label>
@@ -151,7 +88,7 @@ function formchange(n){
       <label id="pass" class="label">Password</label><br>
       <input id="pass1" class="text" type="password" name="password" placeholder="Enter Password" onclick="change('pass')" required><br>
       <button class="btn" type="submit">Login</button>
-      <a class="link-btn" href="">SignUp</a>
+      <a class="link-btn" href="UserSignUp.html">SignUp</a>
     </form>
    </div>
    <div id="ngo-form">
@@ -161,7 +98,7 @@ function formchange(n){
       <label id="password" class="label">Password</label><br>
       <input id="password1" class="text" type="password" name="password" placeholder="Enter Password" onclick="nchange('password')" required><br>
       <button class="btn" type="submit">Login</button>
-      <a class="link-btn" href="">SignUp</a>
+      <a class="link-btn" href="NGOSignUp.html">SignUp</a>
    </form>
   </div>
    </div>

@@ -1,74 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<title>KudaKhazaana</title>
 		<link rel="Shortcut Icon" href="images/11111.png">
 		<link rel="stylesheet" href="css/nav.css">
-		<style type="text/css">
-			.icon{
-				margin-top: auto;
-				margin-left: 1%;
-				width: 420px;
-				height: 130px;		
-			} 
-			#logo{
-				color: yellow;
-				font-style: italic;
-				font-family: yellowtail;
-				font-size: 40px;
-				position: relative;
-				top: -50px;
-				left: 5px;
-			}
-			.logo-link{
-				text-decoration: none;
-			}
-			.slideshow{
-				position: relative;
-				width: 1000px;
-				margin-right: auto;
-				margin-left: auto;
-				height : 500px;
-			}
-			.button{
-				cursor: pointer;
-				position: absolute;
-				top: 50%;
-				height: 60px;
-				width: 35px;
-				background-color: transparent;
-				border: none;
-				z-index: 1;
-			}
-			
-			.right{
-				right: 0;
-			}
-			.slide-button{
-				margin-left: -10px;
-				height: 60px;
-				width: 35px;
-				opacity: 0.4;
-				transition: all 0.5s ease;
-			}
-			.button:hover .slide-button{
-				opacity: 1;
-			}
-			.group{
-				display: none;
-			}
-			.image{
-				max-height: 500px;
-				width:100%;
-			}
-			.caption{
-				position: absolute;
-				top:90%;
-				right: 50%;
-				color : grey;
-				font-size: 16px;
-			}
-		</style>
+		<link rel="stylesheet" href="css/home.css">
 	</head>
 
 	<body bgcolor="#33d150">
